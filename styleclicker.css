@@ -1,0 +1,56 @@
+body{
+   margin: 0;
+}
+
+#tt{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    min-width: 1200px;
+}
+#total{
+    height: 800px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    border: 5px solid darkred;
+    position: absolute;
+    margin: 0;
+}
+
+#G{
+    height: auto;
+    width: 33%;
+    background-color: red;
+}
+
+#M{
+    height: auto;
+    width: 33%;
+    background-color: aqua;
+    border-right: 5px solid darkred;    
+}
+
+#D{
+    height: auto;
+    width: 33%;
+    background-color: blueviolet;
+}
+
+#fant{
+    top: 0;
+    left: 0px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 5px;
+    border-radius: 10px;
+    width: 33%;
+    position: absolute;
+    text-align: center;
+    margin: 5px;
+}

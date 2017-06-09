@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <meta charset="utf-8" />
+        <style>
+            #consol {
+                background-color: black;
+                color: transparent;
+                border: 5px solid darkred;
+                width: inherit;
+                height: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                                                                        
+            }
+            #tap{
+                bottom: 10px;
+                width: 1800px;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+            }
+            #text{
+                top: 60px;
+                bottom: 50px;
+                right: 0;
+                left: 0;
+                background-color : black;           
+            }
+            
+            .matrix{
+                position: fixed;
+                top: 0;
+                left: 0;               
+            }
+            
+            #tot{
+                width: 4px;
+                height: 700px;
+                margin-top: 50vh; 
+                transform: translateY(-50%);
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                transition-duration: 1s;
+            }
+            .ongl{
+                height: 710px;
+            }
+            
+            input{
+                width: 1800px;
+            }
+            #bouton{
+                height: 50px;
+                width: 50px;
+                background-color: green;
+                position: absolute;
+            }
+            #select{
+                position: absolute;
+                width: 200px;
+                height: 710px;
+                background-color: black;
+                transform: translateY(-50%);
+                border: 5px solid darkred;
+                border-radius: 20px;
+                color: lawngreen;
+            }
+            
+        </style>
+        <title>-|Wazabi|-</title>
+    </head>
+    <body>
+        
+        <canvas class="matrix" style="margin: 0; padding: 0; display: block;" id="canvas" onclick="petit();"></canvas>
+        
+        <span id="tap">
+            
+            <input type="text" name="command" onclick="taille();"/> 
+            
+        </span>
+        <div id="select">
+            <p id="user">
+            Users list : <br>
+                _________________
+            </p>
+            <div>
+                TRUC POUR AFFICHER LES USER
+            </div>
+        </div>
+        <div id="tot">
+            <div class="ong">
+                <img class="ongl" src="onglet.png">        
+            </div>
+        
+        
+            <div id="consol", style="opacity : 0.95;">
+                &nbsp;&nbsp;Consol A.R.C. prototype
+                <br><br>
+                >>> Bienvenue, a toi les commandes; <br>
+                ______________
+                <p id="text">
+                    
+                </p>
+            
+           
+            </div>
+        
+        
+            <div class="ong">
+                <img class="ongl" src="onglet2.png">
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <script>
+            var grand = false;
+            function taille() {
+                
+                var obj = document.getElementById('tot');
+                var obj2 = document.getElementById('consol');
+                
+                if(grand == false){
+                    obj.style.width = "1000px";
+                    obj2.style.color = "lawngreen"
+                    grand = true;
+                    
+                }
+            }
+            
+            function petit() {
+                
+                var obj = document.getElementById('tot');
+                var obj2 = document.getElementById('consol');
+                
+                if(grand == true){
+                    obj.style.width = "4px";
+                    obj2.style.color = "transparent"
+                    grand = false;
+                }
+            }
+        </script>
+
+    
+        
+        
+        
+    </body>
+    
+    <script>
+		var context = document.getElementById("canvas");
+		var ctx = context.getContext("2d");
+		
+		context.height = window.innerHeight;
+		context.width = window.innerWidth;
+		//chinese characters - taken from the unicode charset
+        var chinese = "0123456789ABCDEFあぁかさたなはまやゃらわがざだばぱいぃきしちにひみりゐぎじぢびぴうぅくすつぬふむゆゅるぐずづぶぷえぇけせてねへめれゑげぜでべぺおぉこそとのほもよょろをごぞどぼぽゔっんゝゞ、。";
+        //converting the string into an array of single characters
+        chinese = chinese.split("");
+
+        var font_size = 10;
+        var columns = context.width/font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for(var x = 0; x < columns; x++)
+            drops[x] = 1; 
+
+        //drawing the characters
+        var draw = function()
+        {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, context.width, context.height);
+	
+            ctx.fillStyle = "red"; 
+            ctx.font = font_size + "px arial";
+            //looping over drops
+            for(var i = 0; i < drops.length; i++)
+            {
+                //a random chinese character to print
+                var text = chinese[Math.floor(Math.random()*chinese.length)];
+                //x = i*font_size, y = value of drops[i]*font_size
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+		
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if(drops[i]*font_size > context.height && Math.random() > 0.975)
+                    drops[i] = 0;
+		
+                //incrementing Y coordinate
+                drops[i]++;
+	       }
+        };
+
+        /*dataUrl = context.toDataURL();
+        var body = document.getElementById("body");
+        body.style.background='url('+dataUrl+')';*/
+        
+        setInterval(draw, 1000 / 30);
+	</script>
+    
+    </html>

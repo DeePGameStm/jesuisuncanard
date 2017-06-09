@@ -1,0 +1,331 @@
+@font-face {
+        font-family: 'marines';
+        src: url('Tele-Marines.eot');
+        src: local('marines'), local('marines'), url('Tele-Marines.woff') format('woff'), url('Tele-Marines.ttf') format('truetype'), url('Tele-Marines.svg') format('svg');
+            }
+
+.loginDiv{
+top: 80px;
+left: 0;
+position: absolute;
+border-bottom: 5px solid darkred;
+border-right: 5px solid darkred;
+border-bottom-right-radius: 10px;
+min-height: 50px;
+max-height: 100px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+background-color: black;
+min-width: 70px;
+max-width: 100px;
+overflow: auto;
+}
+
+#fondLogin{
+visibility: hidden;
+}
+
+#loginDiv2{
+width: 400px;
+height: 180px;
+background-color: white;
+border: 8px solid black;
+border-radius: 30px;
+padding: 10px;
+position: fixed;
+margin-top: 50vh; 
+transform: translateY(-50%);
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+align-self: center;
+visibility: hidden;
+font-family: 'marines';
+}
+
+#signupDiv2{
+width: 400px;
+height: 270px;
+background-color: white;
+border: 8px solid black;
+border-radius: 30px;
+margin-top: 50vh; 
+transform: translateY(-50%);
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+padding: 10px;
+position: fixed;
+align-self: center;
+visibility: hidden;
+font-family: 'marines';
+}
+#login{
+margin: 2px;
+height: 20px;
+margin-left: 3px;
+}
+
+#signup{
+margin: 2px;
+height: 20px;
+margin-left: 3px;
+}
+
+#ttl{
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+display: flex;
+position: fixed;
+opacity: 0.9;
+}
+
+#tt{
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+min-width: 1600px;
+display: flex;
+justify-content: center;
+position: absolute;
+}
+.total{
+top: 100px;
+width: 1600px;
+border: 10px solid darkred;
+border-radius: 10px;
+position: relative;
+background-image: url(backgroundblack.jpg);
+height: 900px;
+}
+
+.CO{
+background-color: white;
+top: 140px;
+left: 1300px;
+width: 200px;
+height: 500px;
+position: absolute;
+border: 5px solid darkred;
+border-radius: 70px;
+display: flex;
+flex-direction: column;
+opacity: 0.8;
+}
+
+
+.CO0{
+border: 3px solid darkred;
+border-radius: 20px;
+align-self: center;
+}
+.CO1{
+border: 3px solid darkred;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+overflow: auto;
+overflow-x: hidden;
+}
+
+.connection{
+position: absolute;
+right: 10px;
+}
+
+body{
+    margin:0;
+    background-image: url(fondbody.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+
+.bodyB
+{
+top: 110px;
+left: 290px;
+background-color: black;
+width: 900px;
+height: 25px;
+position: absolute;
+color: white;
+border: 8px solid darkred;
+border-radius: 20px;
+text-align: center;
+font-size: 18pt;
+opacity: 0.9;
+font-family: 'marines', sans-serif;
+padding-top: 10px;
+}
+
+.body
+{
+top: 190px;
+left: 290px;
+background-color: white;
+width: 900px;
+height: 60%;
+position: absolute;
+border: 8px solid darkred;
+border-radius: 20px;
+display: flex;
+opacity: 0.8;
+}
+.Bleft{
+border-right: 3px solid darkred;
+margin-left: 10px;
+position: relative;
+width:50%;
+padding-right: 10px;
+}
+
+.Bright{
+border-left: 3px solid darkred;
+margin-right: 10px;
+position: relative;
+width: 50%;
+padding-left: 10px;
+}
+
+.abarreG
+{
+    margin-bottom: 10px;
+}
+.barreG
+{
+    left: 50px;
+    top: 140px;
+    overflow: scroll;
+    flex: auto;
+    border: 6px solid darkred;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 66%;
+    width: 190px;
+    position: absolute;
+    overflow-x: hidden;
+    padding: 5px;
+    background-color: gray;
+}
+footer{
+    font-size: small;
+    opacity: 0.6;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+header{
+    top: 0;
+    background-image: url(backgroundheader.jpg);
+    }
+
+.headDiv{
+    position: fixed;
+    background-image: url(backgroundheader.jpg);
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    display: flex;
+}
+
+.logoL{
+    width: 165px;
+    background-color: darkgray;
+    border: 5px inset;
+    border-color: lightgray;
+    margin-top: 0;
+}
+
+.logoA{
+    width: 190px;
+}
+
+.logo{
+    margin-top:
+}
+
+.title{
+    height: 4em;
+    line-height: 4em;
+    margin: 0;
+    color: black;
+    margin-right: 10px;
+}
+
+.test1text{
+    -webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+         margin-left: 50px;
+}
+
+.casetop{
+    background-color: lightgray;
+    float: left;
+    line-height: 20px;
+    height: 20px;
+    border-right: 1px solid;
+    border-color: gray;
+    padding-right: 60px;
+    padding-bottom: 49px;
+
+    -webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+    opacity: 0.8;
+}
+
+.test1:hover{
+    background-color: gray;
+
+    transition-duration: 0.2s;
+}
+
+.test2{
+    background-color: lightgray;
+
+    float: left;
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid;
+    padding-right: 110px;
+    padding-bottom: 49px;
+    margin-left: 5px;
+
+    -webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+}
+
+.test2:hover{
+    background-color: gray;
+
+    float: left;
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid;
+    padding-right: 110px;
+    padding-bottom: 49px;
+    margin-left: 5px;
+
+    -webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+
+    transition-duration: 0.2s;
+}
+
+
+#yop{
+    visibility: hidden;
+}
