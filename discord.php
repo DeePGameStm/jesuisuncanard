@@ -4,7 +4,7 @@
     <head>
     </head>
      <body>
-         <p>GIT!</p>
+         <p>GIT</p>
                  
     </body>
 </html>
